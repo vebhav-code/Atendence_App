@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saksham ID – Quick and Secure Attendance Verification</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-brand">Saksham ID</div>
+        <div class="nav-right">
+            <div class="language-selector">
+                <i class="fas fa-globe"></i>
+                <span>English</span>
+                <div class="signal-bars">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <button class="nav-icon-btn"><i class="fas fa-question-circle"></i></button>
+            <button class="nav-icon-btn"><i class="fas fa-user-circle"></i></button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="badge">
+                <i class="fas fa-shield-alt"></i>
+                Official Digital India Initiative
+            </div>
+            <h1>Quick and Secure<br />Attendance Verification</h1>
+            <p>Works even without internet connection. Empowering India's workforce with reliable and seamless facial
+                authentication.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" id="heroVerifyBtn"><i class="fas fa-camera"></i> Verify Face</button>
+                <button class="btn-outline" id="heroLearnBtn"><i class="fas fa-info-circle"></i> Learn More</button>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-image-card">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Field workers"
+                    class="hero-img" />
+                <div class="offline-badge">
+                    <i class="fas fa-wifi-slash"></i>
+                    <div>
+                        <strong>Offline Mode</strong>
+                        <span>Syncs later automatically</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <div class="section-label">How it Works</div>
+        <div class="steps-grid">
+            <div class="step-card" data-delay="0">
+                <div class="step-icon teal"><i class="fas fa-camera"></i></div>
+                <h3>Take Photo</h3>
+                <p>Simply look into the camera for a split second.</p>
+            </div>
+            <div class="step-card" data-delay="100">
+                <div class="step-icon light"><i class="fas fa-user-check"></i></div>
+                <h3>Check Real Person</h3>
+                <p>System ensures it's a live person, not a photo.</p>
+            </div>
+            <div class="step-card" data-delay="200">
+                <div class="step-icon light"><i class="fas fa-fingerprint"></i></div>
+                <h3>Match Identity</h3>
+                <p>Cloud-free AI matches your secure biometric ID.</p>
+            </div>
+            <div class="step-card" data-delay="300">
+                <div class="step-icon green"><i class="fas fa-check-circle"></i></div>
+                <h3>Mark Attendance</h3>
+                <p>Success! Your attendance is recorded instantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEE IT IN ACTION -->
+    <section class="demo-section">
+        <div class="section-label">See it in Action</div>
+        <div class="demo-container">
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="face-scan-area">
+                            <div class="scan-ring outer"></div>
+                            <div class="scan-ring middle"></div>
+                            <div class="scan-ring inner"></div>
+                            <i class="fas fa-user face-icon"></i>
+                            <div class="scan-line"></div>
+                        </div>
+                        <div class="phone-bar"></div>
+                        <div class="phone-bar short"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-steps">
+                <div class="demo-step active" data-step="1">
+                    <div class="demo-num">1</div>
+                    <div class="demo-content">
+                        <h4>Instant Face Capture</h4>
+                        <p>Our high-speed camera captures facial features in milliseconds.</p>
+                    </div>
+                </div>
+                <div class="demo-step" data-step="2">
+                    <div class="demo-num">2</div>
+                    <div class="demo-content">
+                        <h4>Liveness Detection</h4>
+                        <p>AI ensures a real person is present, preventing spoofing attempts.</p>
+                    </div>
+                </div>
+                <div class="demo-step" data-step="3">
+                    <div class="demo-num">3</div>
+                    <div class="demo-content">
+                        <h4>Secure Local Match</h4>
+                        <p>Encrypted data is matched locally on the device for total privacy.</p>
+                    </div>
+                </div>
+                <div class="demo-step" data-step="4">
+                    <div class="demo-num">4</div>
+                    <div class="demo-content">
+                        <h4>Instant Confirmation</h4>
+                        <p>Attendance is logged with a timestamp, even without connectivity.</p>
+                    </div>
+                </div>
+                <button class="btn-primary demo-btn" id="startDemoBtn">
+                    <i class="fas fa-play-circle"></i> Start Interactive Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECURITY & TRUST -->
+    <section class="security-section">
+        <div class="security-left">
+            <h2>Security &amp; Trust</h2>
+            <p>We prioritize the safety of your personal data. Our system is built on decentralized architecture to
+                ensure your privacy is never compromised.</p>
+            <div class="security-tags">
+                <div class="security-tag"><i class="fas fa-check-circle"></i> Data stored securely</div>
+                <div class="security-tag"><i class="fas fa-check-circle"></i> No internet required</div>
+                <div class="security-tag"><i class="fas fa-check-circle"></i> Fast verification</div>
+                <div class="security-tag"><i class="fas fa-check-circle"></i> Privacy protected</div>
+            </div>
+        </div>
+        <div class="security-right">
+            <div class="security-card dark-card lock-card">
+                <div class="glowing-icon"><i class="fas fa-lock"></i></div>
+                <div class="glow-ring"></div>
+            </div>
+            <div class="security-card dark-card shield-card">
+                <div class="glowing-icon shield-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="glow-ring green-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-brand">Saksham ID</div>
+            <p>© 2024 Saksham ID. Digital India Initiative.</p>
+            <div class="offline-pill">
+                <span class="dot"></span> OFFLINE MODE ACTIVE
+            </div>
+        </div>
+        <div class="footer-right">
+            <a href="#">About</a>
+            <a href="#">Help</a>
+            <a href="#">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+       PHONE DEMO MODAL OVERLAY
+  ============================================================ -->
+    <div class="modal-overlay" id="demoModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+
+        <!-- Phone Shell -->
+        <div class="demo-phone" id="demoPhone">
+
+            <!-- Phone Status Bar -->
+            <div class="dphone-statusbar">
+                <span class="dphone-time" id="dphoneTime">12:29</span>
+                <div class="dphone-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-signal"></i>
+                    <span class="dphone-battery">21%</span>
+                </div>
+            </div>
+
+            <!-- Phone Nav Bar -->
+            <div class="dphone-navbar">
+                <button class="dphone-back" id="dphoneBack"><i class="fas fa-chevron-left"></i></button>
+                <span class="dphone-brand">Saksham ID</span>
+                <div class="dphone-nav-right">
+                    <span class="dphone-offline-chip"><i class="fas fa-wifi-slash"></i> English</span>
+                    <i class="fas fa-question-circle"></i>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+
+            <!-- ── SCREEN 1: CAPTURE ── -->
+            <div class="dphone-screen active" id="screen-capture">
+                <div class="dphone-offline-bar">
+                    <i class="fas fa-wifi-slash"></i> Offline Mode Active
+                </div>
+
+                <!-- Step progress -->
+                <div class="dphone-steps">
+                    <div class="dstep active"><span class="dstep-num">1</span><span class="dstep-label">Capture</span>
+                    </div>
+                    <div class="dstep"><span class="dstep-num">2</span><span class="dstep-label">Verify</span></div>
+                    <div class="dstep"><span class="dstep-num">3</span><span class="dstep-label">Review</span></div>
+                    <div class="dstep"><span class="dstep-num">4</span><span class="dstep-label">Success</span></div>
+                </div>
+
+                <p class="dphone-instruction">Look at the camera</p>
+
+                <!-- Camera Viewfinder -->
+                <div class="dphone-camera-box" id="cameraBox">
+                    <video id="cameraFeed" autoplay playsinline muted></video>
+                    <canvas id="cameraCanvas" style="display:none"></canvas>
+                    <img id="capturedImg" style="display:none" alt="captured" />
+                    <div class="camera-corner tl"></div>
+                    <div class="camera-corner tr"></div>
+                    <div class="camera-corner bl"></div>
+                    <div class="camera-corner br"></div>
+                    <div class="camera-placeholder" id="cameraPlaceholder">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Camera preview</span>
+                    </div>
+                </div>
+
+                <!-- Checklist -->
+                <div class="dphone-checklist">
+                    <div class="dcheck-item">
+                        <div class="dcheck-icon"><i class="fas fa-crop-alt"></i></div>
+                        <div class="dcheck-text">
+                            <strong>Keep face inside frame</strong>
+                            <span>Ensure your entire head is visible</span>
+                        </div>
+                        <i class="fas fa-check-circle dcheck-ok"></i>
+                    </div>
+                    <div class="dcheck-item">
+                        <div class="dcheck-icon"><i class="fas fa-glasses"></i></div>
+                        <div class="dcheck-text">
+                            <strong>Remove sunglasses</strong>
+                            <span>Clear eyes are required for verification</span>
+                        </div>
+                        <i class="fas fa-check-circle dcheck-ok"></i>
+                    </div>
+                    <div class="dcheck-item">
+                        <div class="dcheck-icon"><i class="fas fa-sun"></i></div>
+                        <div class="dcheck-text">
+                            <strong>Stand in good light</strong>
+                            <span>Avoid shadows or bright backlights</span>
+                        </div>
+                        <i class="fas fa-check-circle dcheck-ok"></i>
+                    </div>
+                </div>
+
+                <button class="dphone-cta" id="captureBtn">
+                    <i class="fas fa-camera"></i> Capture Face
+                </button>
+
+                <!-- Bottom nav -->
+                <div class="dphone-bottom-nav">
+                    <div class="dbnav-item active"><i class="fas fa-camera"></i><span>Verify</span></div>
+                    <div class="dbnav-item"><i class="fas fa-list-alt"></i><span>Records</span></div>
+                    <div class="dbnav-item"><i class="fas fa-map-marker-alt"></i><span>Location</span></div>
+                </div>
+            </div>
+
+            <!-- ── SCREEN 2: VERIFYING ── -->
+            <div class="dphone-screen" id="screen-verify">
+                <div class="verify-center">
+                    <div class="verify-spinner-wrap">
+                        <div class="verify-ring r1"></div>
+                        <div class="verify-ring r2"></div>
+                        <div class="verify-ring r3"></div>
+                        <i class="fas fa-fingerprint verify-icon"></i>
+                    </div>
+                    <h3 class="verify-title">Verifying Identity…</h3>
+                    <div class="verify-steps-list">
+                        <div class="vsl-item" id="vsl1"><i class="fas fa-circle-notch fa-spin"></i> Checking liveness…
+                        </div>
+                        <div class="vsl-item dim" id="vsl2"><i class="fas fa-circle-notch fa-spin"></i> Matching
+                            biometric…</div>
+                        <div class="vsl-item dim" id="vsl3"><i class="fas fa-circle-notch fa-spin"></i> Recording
+                            attendance…</div>
+                    </div>
+                    <div class="offline-chip"><i class="fas fa-wifi-slash"></i> Offline Mode Active</div>
+                </div>
+            </div>
+
+            <!-- ── SCREEN 3: SUCCESS ── -->
+            <div class="dphone-screen" id="screen-success">
+                <div class="success-confetti" id="confetti"></div>
+                <div class="success-center">
+                    <div class="success-icon-wrap">
+                        <div class="success-pulse"></div>
+                        <i class="fas fa-check success-check"></i>
+                    </div>
+                    <h2 class="success-title">Verification Successful</h2>
+                    <p class="success-sub"><span class="dot-green"></span> Welcome, Harsh</p>
+
+                    <div class="success-card">
+                        <div class="success-card-row">
+                            <div>
+                                <div class="sc-label">TIME</div>
+                                <div class="sc-val bold" id="successTime">09:30 AM</div>
+                            </div>
+                            <div style="text-align:right">
+                                <div class="sc-label">DATE</div>
+                                <div class="sc-val" id="successDate">Oct 24, 2024</div>
+                            </div>
+                        </div>
+                        <div class="success-record-row">
+                            <i class="fas fa-calendar-check success-record-icon"></i>
+                            <div>
+                                <strong>Attendance Recorded</strong>
+                                <span class="verified-green"><span class="dot-green"></span> Verified Securely</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offline-chip"><i class="fas fa-wifi-slash"></i> ✓ Offline Mode Active</div>
+
+                    <button class="dphone-cta success-done" id="doneToDashboard">Done</button>
+                </div>
+            </div>
+
+            <!-- ── SCREEN 4: DASHBOARD ── -->
+            <div class="dphone-screen" id="screen-dashboard">
+                <div class="dash-offline-bar">
+                    <i class="fas fa-check-circle"></i> Offline Mode Active – Verification works without internet.
+                </div>
+
+                <div class="dash-toolbar">
+                    <div class="dash-lang-group">
+                        <span class="dash-lang active">English</span>
+                        <span class="dash-lang">हिंदी</span>
+                    </div>
+                    <div class="dash-actions">
+                        <button class="dash-btn teal-btn"><i class="fas fa-sync-alt"></i> Sync Data</button>
+                        <button class="dash-btn outline-btn"><i class="fas fa-edit"></i> Manual Entry</button>
+                    </div>
+                </div>
+
+                <div class="dash-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-users stat-ico blue"></i>
+                        <div class="stat-label">Total Workers Present</div>
+                        <div class="stat-val">124</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-user-check stat-ico teal"></i>
+                        <div class="stat-label">Workers Verified</div>
+                        <div class="stat-val">118</div>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width:95%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock stat-ico orange"></i>
+                        <div class="stat-label">Pending Verification</div>
+                        <div class="stat-val">6</div>
+                    </div>
+                    <div class="stat-card warn">
+                        <div class="stat-warn-top">
+                            <i class="fas fa-wifi-slash stat-ico red"></i>
+                            <i class="fas fa-info-circle stat-info"></i>
+                        </div>
+                        <div class="stat-label">Offline Sync Status</div>
+                        <div class="stat-val">24</div>
+                        <div class="stat-sync-note">Records waiting to sync</div>
+                    </div>
+                </div>
+
+                <div class="dash-lower">
+                    <div class="dash-verifications">
+                        <div class="dv-header">
+                            <strong>Recent Verifications</strong>
+                            <a href="#" class="dv-viewall">View All →</a>
+                        </div>
+                        <div class="dv-item">
+                            <img src="https://i.pravatar.cc/36?img=5" alt="" class="dv-avatar" />
+                            <div class="dv-info">
+                                <strong>Priya Sharma</strong>
+                                <span>Verified via Face Match</span>
+                            </div>
+                            <div class="dv-right">
+                                <span class="dv-time">09:42 AM</span>
+                                <span class="dv-badge success">SUCCESS</span>
+                            </div>
+                        </div>
+                        <div class="dv-item highlight">
+                            <img src="https://i.pravatar.cc/36?img=12" alt="" class="dv-avatar" />
+                            <div class="dv-info">
+                                <strong>Harsh</strong>
+                                <span>Verified via Face Match</span>
+                            </div>
+                            <div class="dv-right">
+                                <span class="dv-time" id="dashTime2">09:38 AM</span>
+                                <span class="dv-badge success">SUCCESS</span>
+                            </div>
+                        </div>
+                        <div class="dv-item">
+                            <img src="https://i.pravatar.cc/36?img=8" alt="" class="dv-avatar" />
+                            <div class="dv-info">
+                                <strong>Arjun Singh</strong>
+                                <span>Verified via Saksham Card</span>
+                            </div>
+                            <div class="dv-right">
+                                <span class="dv-time">09:36 AM</span>
+                                <span class="dv-badge success">SUCCESS</span>
+                            </div>
+                        </div>
+                        <div class="dv-item">
+                            <img src="https://i.pravatar.cc/36?img=20" alt="" class="dv-avatar" />
+                            <div class="dv-info">
+                                <strong>Meena Devi</strong>
+                                <span>Face Auth Pending Review</span>
+                            </div>
+                            <div class="dv-right">
+                                <span class="dv-time">09:15 AM</span>
+                                <span class="dv-badge retry">RETRY</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-location">
+                        <strong>Location Focus</strong>
+                        <div class="dash-map-box">
+                            <div class="dash-map-inner">
+                                <div class="map-dot"></div>
+                                <div class="map-ping"></div>
+                            </div>
+                            <div class="dash-map-label">
+                                <strong>Sector 12 Construction Site</strong>
+                                <span>Active since 06:00 AM</span>
+                            </div>
+                        </div>
+                        <div class="dash-summary-card">
+                            <strong>Daily Summary</strong>
+                            <p>Verification peak occurred at 08:45 AM today. 92% of workers checked in within the first
+                                hour.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-footer">
+                    <span>Saksham ID</span>
+                    <span>© 2024 Saksham ID. Digital India Initiative.</span>
+                    <div class="dash-footer-links">
+                        <a href="#">About</a><a href="#">Help</a><a href="#">Privacy</a>
+                    </div>
+                </div>
+
+                <button class="dphone-cta dash-close-btn" id="closeDemoBtn">
+                    <i class="fas fa-times"></i> Close Demo
+                </button>
+            </div>
+
+        </div><!-- /demo-phone -->
+    </div><!-- /modal-overlay -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
